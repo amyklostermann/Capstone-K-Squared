@@ -1,14 +1,9 @@
-# Savvy Coders Project Boilerplate Starter Kit
+# Amy Klostermann's Capstone Project - K-Squared
 
 ## Overview
 
-This template repository contains several opinionated, 'starter' files and settings to help Savvy Coder students focus more time and energy on learning how to code and/or craft 'business logic' for projects and less time on configurations.
-
-In addition to a '.gitignore' and some VS Code specific extensions and settings, it includes the 'recommended' settings for:
-
-1. [ESLint](eslint.org)
-2. [Stylelint](stylelint.io)
-3. [Prettier](prettier.io)
+1. [Docs](C:\Users\amy\Code\SavvyCoders\Capstone-K-Squared\Docs)
+2.
 
 ## Get Started
 
