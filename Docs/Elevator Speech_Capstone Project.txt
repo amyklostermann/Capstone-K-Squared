@@ -1,0 +1,4 @@
+Elevator Speech – Capstone Project – K-Squared
+Hi, my name is Amy Klostermann. I am currently an IT Manager for a local nonprofit.
+I am starting a Foundation, K-Squared, where the focus will be three-fold: Animal rescue, Suicide Prevention, and combining the two causes to support the human/animal bond. 
+I created this SPA to match those who suffer from a mental illness with animals most suitable to be of support of that mental illness.  
