@@ -22,3 +22,15 @@ nav > ul > li {
   padding: 0.5rem;
   list-style-type: none;
   }
+
+navMI > ul {
+  float: left;
+  list-style-type: none;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
