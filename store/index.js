@@ -1,0 +1,6 @@
+export { default as Bio } from "./Bio"
+export { default as Suicide } from "./Suicide"
+export { default as Gallery } from "./Gallery"
+export { default as Home } from "./Home"
+export { default as Links } from "./Links"
+export { default as Animals } from "./Animals"

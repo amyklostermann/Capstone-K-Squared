@@ -1,0 +1,24 @@
+nav {
+  margin: 0;
+  display: flex-end;
+  align-items: center;
+}
+
+nav > i {
+  padding: 1rem;
+  font-size: 2em;
+}
+
+nav > ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0 0;
+}
+
+nav > ul > li {
+  margin: 0;
+  padding: 0.5rem;
+  list-style-type: none;
+  }
