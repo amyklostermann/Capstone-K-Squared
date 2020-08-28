@@ -30,8 +30,6 @@ function render(st) {
   `;
 
   router.updatePageLinks();
-
-  //addPicOnFormSubmit(st);
 };
 
 render(state.Home);
