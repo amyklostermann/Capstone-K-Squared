@@ -1,4 +1,4 @@
-export { default as Bio } from "./Bio"
+export { default as AboutUs } from "./AboutUs"
 export { default as Suicide } from "./Suicide"
 export { default as Gallery } from "./Gallery"
 export { default as Home } from "./Home"

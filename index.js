@@ -7,10 +7,8 @@ import axios from "axios";
 //import "./env";
 import { auth, db } from "./firebase"
 
-const router = new Navigo(location.origin);
 
-//mental illnesses from Firebase
-const coll = db.collection("mental_Illnesses");
+const router = new Navigo(location.origin);
 
 router
   .on({
@@ -45,20 +43,31 @@ document.querySelector(".fa-bars").addEventListener("click", () => {
 
 
 //FUNCTION: GET MENTAL ILLINESSES FROM FIREBASE
+//mental illnesses from Firebase
+const mentalIllnesses = db.collection("mentalIllnesses");
+
 function getMentalIllnessFromDB(mentalIllness) {
-  db.collection("mental_Illnesses")
-       .get()
-      .then(snapshot =>
-        snapshot.docs.forEach(doc => {
-          if (url === doc.data().url) {
-            let id = doc.id;
-            db.collection("mental_Illnesses")
-            .doc(type)
-            return coll;
-          }
-        }
-        )
-      )
-};
+  return db
+    .collection("mentalIllnesses")
+    .get()
+    .then((snapshot) => {
+      snapshot.docs.forEach(doc => {
+        let id = doc.id;
+      });
+     });
+}
+console.log (getMentalIllnessFromDB("mentalIllnesses"));
 
 
+//console.log(doc.<<serviceanimals>>);
+
+//Source: https://firebase.google.com/docs/firestore/quickstart
+// getMentalIllnessFromDB = function() {
+//   docRef.onSnapshot(function (doc) {
+//     const myDate = doc.data();
+//     outputHeader.innerText = myData.serviceAnimals;
+//     }
+//   )
+// };
+
+//getMentalIllnessFromDB();
