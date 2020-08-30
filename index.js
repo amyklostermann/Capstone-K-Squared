@@ -99,7 +99,7 @@ function compareTheData(mentalIllnessFromDropDown, saFirestoredata) {
   console.log("saFirestoredata = ", saFirestoredata);
 
   state.Saresults.comparedData = [];
-  saFirestoredata.forEach(miFBItem => {
+  saFirestoredata.forEach(saFirestoredata => {
     mentalIllnessFromDropDown.DataList.forEach(dropDownItem => {
       if (saFirestoredata.mental_illness === dropDownItem.mentalIllnessFromDropDown) {
         let tempItem = dropDownItem;
