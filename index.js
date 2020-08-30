@@ -6,7 +6,7 @@ import { capitalize } from "lodash";
 import axios from "axios";
 //import "./env";
 import { auth, db } from "./firebase"
-import writeresults from "./lib/writeResults"
+import { writeresults } from "./lib/writeResults"
 
 
 const router = new Navigo(location.origin);
@@ -103,15 +103,13 @@ function compareTheData(miDropDowndata, miFirestoredata) {
     miDropDowndata.DataList.forEach(dropDownItem => {
       if (miFBItem.mental_illness === dropDownItem.mentalIllnessFromDropDown) {
         let tempItem = dropDownItem;
-        state.saresults.comparedData.push(tempItem);
+        state.Saresults.comparedData.push(tempItem);
       }
     });
   });
+    filterData(state.Saresults.comparedData);
     writeResults(state.Saresults.comparedData);
   };
-
-console.log("miDropDowndata = ", miDropDowndata);
-console.log("miFirestoredata = ", miFirestoredata);
 
 
 // // ** FILTER according to drop-down choice
@@ -130,7 +128,7 @@ function filterData(serviceAnimal) {
 
 console.log(getserviceAnimalFromDB("serviceAnimals"));
 
-state.Saresults.filteredData = filteredData
+state.Saresults.filteredData = filteredData;
 writeresults(state.Saresults.filteredData);
     };
 
