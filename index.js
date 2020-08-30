@@ -68,7 +68,6 @@ function getMentalIllnessFromDB(mentalIllness) {
       console.log(snapshot);
       snapshot.docs.forEach(doc => {
       console.log ("Document data:", doc.data());
-        renderMentalIllnesses(doc);
       });
      });
 }
@@ -93,54 +92,46 @@ function getserviceAnimalFromDB(serviceAnimal) {
 
 }
 
-//** FILTER according to drop-down choice
-//***************************************
-// function filterData(serviceAnimal) {
-//   let filteredData = [];
-//   let mentalIllnessFromDropDown = document.querySelector("#mental_illness").value;
+//** functions to COMPARE Data
+//*****************************
+function compareTheData(miDropDowndata, miFirestoredata) {
+  console.log("miDropDowndata = ", miDropDowndata);
+  console.log("miFirestoredata = ", miFirestoredata);
+
+  state.Saresults.comparedData = [];
+  miFirestoredata.forEach(miFBItem => {
+    miDropDowndata.DataList.forEach(dropDownItem => {
+      if (miFBItem.mental_illness === dropDownItem.mentalIllnessFromDropDown) {
+        let tempItem = dropDownItem;
+        state.saresults.comparedData.push(tempItem);
+      }
+    });
+  });
+    writeResults(state.Saresults.comparedData);
+  };
+
+console.log("miDropDowndata = ", miDropDowndata);
+console.log("miFirestoredata = ", miFirestoredata);
 
 
-//   state.Saresults.mental_illness.forEach(element => {
-//     if (element.Mental_Illness === mentalIllnessFromDropDown) {
-//         state.Saresults.filteredData.push(element);
-//     };
-//       });
+// // ** FILTER according to drop-down choice
+// // ***************************************
+function filterData(serviceAnimal) {
+  let filteredData = [];
+  let mentalIllnessFromDropDown = document.querySelector("#mental_illness").value;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  state.Saresults.mental_illness.forEach(element => {
+    if (element.mental_illness === mentalIllnessFromDropDown) {
+        state.Saresults.filteredData.push(element);
+    };
+      });
 
 
 console.log(getserviceAnimalFromDB("serviceAnimals"));
-writeresults(state.Suicide.serviceAnimals);
+
+state.Saresults.filteredData = filteredData
+writeresults(state.Saresults.filteredData);
+    };
 
 
-//Source: https://firebase.google.com/docs/firestore/quickstart
-// getMentalIllnessFromDB = function() {
-//   docRef.onSnapshot(function (doc) {
-//     const myDate = doc.data();
-//     outputHeader.innerText = myData.serviceAnimals;
-//     }
-//   )
-// };
-
-//getMentalIllnessFromDB();
