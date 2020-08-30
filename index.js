@@ -6,7 +6,7 @@ import { capitalize } from "lodash";
 import axios from "axios";
 //import "./env";
 import { auth, db } from "./firebase"
-import { writeresults } from "./lib/writeResults"
+import { writeResults } from "./lib/writeResults"
 
 
 const router = new Navigo(location.origin);
