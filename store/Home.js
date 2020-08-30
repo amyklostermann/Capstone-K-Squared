@@ -1,4 +1,4 @@
 export default {
-  header: "WHAT SHOULD THE HOME PAGE HEADER BE?",
+  header: "K<sup>2</sup> Legacy Foundation",
   page: "Home"
 };

@@ -1,5 +1,5 @@
 export default {
-  header: "Welcome to the Gallery",
+  header: "K<sup>2</sup> Legacy Foundation",
   page: "Gallery",
   pictures: [
     {

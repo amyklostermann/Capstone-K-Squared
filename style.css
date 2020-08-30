@@ -1,3 +1,14 @@
+header {
+  font-family: 'Lovers Quarrel', cursive;
+  padding: 0.5rem;
+  font-size: 56px;
+  color: black;
+}
+
+body {
+  background-color: #99CED3
+}
+
 nav {
   margin: 0;
   display: flex-end;
@@ -23,14 +34,40 @@ nav > ul > li {
   list-style-type: none;
   }
 
-navMI > ul {
-  float: left;
-  list-style-type: none;
+footer {
+  justify-content: center;
+  text-align: center;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  text-align: center;
+h2 {
+  font-family: 'Cinzel', serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+.homeStatements {
+  margin-left: 12em;
+  margin-right: 12em;
+  font-size: 18px;
+}
+
+.homeHeaders {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 98%;
+  min-width: 290px;
+  color: var(--black-color);
+  z-index: 1;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }

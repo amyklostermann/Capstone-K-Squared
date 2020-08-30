@@ -1,12 +1,13 @@
-export default() => `
-<navMI>
-  <ul>
-    <li><a href>Anxiety</a></li>
-    <li><a href>Depression</a></li>
-    <li><a href>PTSD</a></li>
-   </ul>
-  </navMI>
-      `;
-
+export default () => `
+<section class="mentalIllnesses">
+<div>
+    <input type="text" name="Mental_Illness" id="mental_illness" class="sbField" placeholder="Mental Illness" value="${st.mental_Illness}" required>
+    <option value="Anxiety">Anxiety</option>
+    <option value="Depression">Depression</option>
+    <option value="PTSD">PTSD</option>
+    </select>
+</div>
+</section>
+`;
 
 

@@ -1,5 +1,5 @@
 export default {
-  header: "Mental Illnesses",
+  header: "K<sup>2</sup> Legacy Foundation",
   page: "Animals"
 };
 

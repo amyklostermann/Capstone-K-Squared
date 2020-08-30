@@ -1,4 +1,4 @@
 export default {
-  header: "Suicide",
-  page: "Suicide"
+  header: "K<sup>2</sup> Legacy Foundation",
+  page: "Suicide",
 };

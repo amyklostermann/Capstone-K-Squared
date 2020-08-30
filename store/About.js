@@ -1,4 +1,4 @@
 export default {
-  header: "About",
-  page: "About Us"
+  header: "K<sup>2</sup> Legacy Foundation",
+  page: "About"
 };
