@@ -67,7 +67,10 @@ p {
   z-index: 1;
   overflow: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
+}
+
+#mental_illness {
+  margin: 0 auto;
+  width: 10%;
+  min-width: 10px;
 }
