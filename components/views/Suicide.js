@@ -1,13 +1,14 @@
-export default () => `
-<section class="mentalIllnesses">
+export default (st) => `
 <div>
-    <input type="text" name="Mental_Illness" id="mental_illness" class="sbField" placeholder="Mental Illness" value="${st.mental_Illness}" required>
+<select id="mental_illness" name="mentalIllness" class="sbField" value="${st.mental_Illness}" required>
+    <option disabled selected value="Mental Illness">Mental Illness</option>
     <option value="Anxiety">Anxiety</option>
     <option value="Depression">Depression</option>
     <option value="PTSD">PTSD</option>
-    </select>
+</select>
 </div>
-</section>
+<div id="container" class="container">
+</div>
 `;
 
 
