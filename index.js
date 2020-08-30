@@ -94,14 +94,14 @@ function getserviceAnimalFromDB(serviceAnimal) {
 
 //** functions to COMPARE Data
 //*****************************
-function compareTheData(miDropDowndata, miFirestoredata) {
-  console.log("miDropDowndata = ", miDropDowndata);
-  console.log("miFirestoredata = ", miFirestoredata);
+function compareTheData(mentalIllnessFromDropDown, saFirestoredata) {
+  console.log("mentalIllnessFromDropDown= ", mentalIllnessFromDropDown);
+  console.log("saFirestoredata = ", saFirestoredata);
 
   state.Saresults.comparedData = [];
-  miFirestoredata.forEach(miFBItem => {
-    miDropDowndata.DataList.forEach(dropDownItem => {
-      if (miFBItem.mental_illness === dropDownItem.mentalIllnessFromDropDown) {
+  saFirestoredata.forEach(miFBItem => {
+    mentalIllnessFromDropDown.DataList.forEach(dropDownItem => {
+      if (saFirestoredata.mental_illness === dropDownItem.mentalIllnessFromDropDown) {
         let tempItem = dropDownItem;
         state.Saresults.comparedData.push(tempItem);
       }
