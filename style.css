@@ -1,3 +1,8 @@
+* {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 header {
   font-family: 'Lovers Quarrel', cursive;
   padding: 0.5rem;
@@ -39,7 +44,7 @@ footer {
   text-align: center;
 }
 
-h2 {
+h1, h2, h3 {
   font-family: 'Cinzel', serif;
 }
 
@@ -74,3 +79,22 @@ p {
   width: 10%;
   min-width: 10px;
 }
+
+.blur {
+  float: left;
+  padding: 0px 5px 0px 0px;
+  margin-left: 10px;
+  width: 15%;
+}
+
+#jasonintro {
+  margin: 0 auto;
+  min-width: 15px;
+}
+
+#winstonintro {
+  margin: 0 auto;
+  min-width: 15px;
+}
+
+

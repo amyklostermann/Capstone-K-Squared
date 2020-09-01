@@ -1,12 +1,12 @@
 export default {
-  page: "SAResults",
+  page: "Saresults",
   saDBdata: [],
   saFirestoreData: [],
   comparedData: [],
   filteredData: [],
-  type: "",
-  mental_illness: "",
-  trait: "",
-  url: "",
+  Type: "",
+  Mental_Illness: "",
+  Trait: "",
+  URL: "",
   filter: false
 };

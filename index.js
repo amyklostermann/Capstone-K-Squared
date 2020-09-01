@@ -8,7 +8,6 @@ import axios from "axios";
 import { auth, db } from "./firebase"
 import { writeResults } from "./lib/writeResults"
 
-
 const router = new Navigo(location.origin);
 
 router
@@ -89,7 +88,6 @@ function getserviceAnimalFromDB(serviceAnimal) {
       console.log ("Document data:", doc.data());
       });
      });
-
 }
 
 //** functions to COMPARE Data
@@ -132,4 +130,13 @@ state.Saresults.filteredData = filteredData;
 writeresults(state.Saresults.filteredData);
     };
 
-
+// // ** Listen for click
+// // ***************************************
+function addSAListener(st) {
+  if(st.page === "Saresults") {
+    document.querySelector("#mental_illness").addEventListener("submit", event => {
+      event.preventDefault();
+      searchBarSearch();
+    })
+  }
+};

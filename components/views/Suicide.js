@@ -1,6 +1,8 @@
 export default (st) => `
+<section id="Saresults">
+<h1>Suicide Awareness and Prevention</h1>
 <div>
-<select id="mental_illness" name="mentalIllness" class="sbField" value="${st.mental_Illness}" required>
+<select id="mental_illness" name="mentalIllness" class="sbField" value="${st.Mental_Illness}" required>
     <option disabled selected value="Mental Illness">Mental Illness</option>
     <option value="Anxiety">Anxiety</option>
     <option value="Depression">Depression</option>
@@ -9,6 +11,7 @@ export default (st) => `
 </div>
 <div id="container" class="container">
 </div>
+</section>
 `;
 
 
