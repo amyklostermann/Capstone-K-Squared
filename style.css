@@ -1,4 +1,4 @@
-* {
+#root {
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -6,7 +6,7 @@
 header {
   font-family: 'Lovers Quarrel', cursive;
   padding: 0.5rem;
-  font-size: 56px;
+  font-size: 60px;
   color: black;
 }
 
@@ -44,7 +44,7 @@ footer {
   text-align: center;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
   font-family: 'Cinzel', serif;
 }
 
@@ -58,6 +58,20 @@ p {
   font-size: 18px;
 }
 
+.homeMIHeaders {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  margin-top: 350px;
+}
+
+.homeSumHeaders {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  align-content: flex-end;
+}
+
 .homeHeaders {
   display: flex;
   justify-content: center;
@@ -65,19 +79,23 @@ p {
 }
 
 .container {
-  margin: 0 auto;
-  width: 98%;
-  min-width: 290px;
-  color: var(--black-color);
-  z-index: 1;
-  overflow: auto;
-  display: flex;
+  display: flex;;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 25px 150px 150px 400px;
+  width: 350px;
+  height: 350px;
+  padding: 50px;
+  border: 3px solid #5F6366;
+  background-color: beige;
+  font-family: 'Roboto', sans-serif;
 }
 
 #mental_illness {
   margin: 0 auto;
-  width: 10%;
+  width: 15%;
   min-width: 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .blur {
@@ -95,6 +113,44 @@ p {
 #winstonintro {
   margin: 0 auto;
   min-width: 15px;
+}
+
+#jumbotron1 {
+  margin-left: 150px;
+  margin-right: auto;
+  margin-top: auto;
+ }
+
+ #jumbotron2 {
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ #jumbotron3 {
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ #jumbotron4 {
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ #jumbotron5 {
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ #supportAnimalsHeader {
+  display: flex;
+  justify-content: center;
+  margin: 50px 200px 0px 150px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+}
+
+#hotline {
+  text-align: center;
 }
 
 
