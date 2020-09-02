@@ -37,9 +37,9 @@ function render(st) {
   router.updatePageLinks();
 }
 
-function suicideQuerySelectors() {
+function suicideQuerySelectors(state, illness) {
   const suicidePage = document.getElementById("idk");
-  suicidePage.innerHTML = writeResults(state.Saresults.saFirestoreData);
+  suicidePage.innerHTML = writeResults(state.Saresults.saFirestoreData, illness);
 }
 
 // add menu toggle to bars icon in nav bar
@@ -47,34 +47,13 @@ document.querySelector(".fa-bars").addEventListener("click", () => {
   document.querySelector("nav > ul").classList.toggle("hidden--mobile");
 });
 
-// function populateMentalIllnesses () {
-//   document.querySelector("#mental-illnesses") = doc.getMentalIllnessFromDB;
-// }
-
-// const mentalIllnessDB = document.querySelectorAll('#mental-Illnesses');
-
-// //create element and render mental illnesses
-// function renderMentalIllnesses(doc) {
-//   let li = document.createElement('li');
-//   let mentalIllnesses = document.createElement('span');
-
-//   li.setAttribute('data-id', doc.id);
-//   mentalIllnessDB.textContent = doc.data().mentalIllnesses
-
-//li.appendChild(mentalIllnesses);
-
-//mentalIllnessDB.appendChild(li);
-//}
-
 //get mental illnesses from Firebase
 function getMentalIllnessFromDB(mentalIllness) {
   return db
     .collection("mentalIllnesses")
     .get()
     .then((snapshot) => {
-      console.log(snapshot);
-      snapshot.docs.forEach((doc) => {
-        console.log("Document data:", doc.data());
+        snapshot.docs.forEach((doc) => {
       });
     });
 }
@@ -96,58 +75,11 @@ function getserviceAnimalFromDB() {
         console.log("Document data:", doc.data());
       });
     })
-    .then(() => suicideQuerySelectors(state));
-}
-
-//** functions to COMPARE Data
-//*****************************
-function compareTheData(mentalIllnessFromDropDown, saFirestoreData) {
-  console.log("mentalIllnessFromDropDown= ", mentalIllnessFromDropDown);
-  console.log("saFirestoreData = ", saFirestoreData);
-
-  state.Saresults.comparedData = [];
-  saFirestoreData.forEach((saFirestoreData) => {
-    mentalIllnessFromDropDown.DataList.forEach((dropDownItem) => {
-      if (
-        saFirestoreData.mental_illness ===
-        dropDownItem.mentalIllnessFromDropDown
-      ) {
-        let tempItem = dropDownItem;
-        state.Saresults.comparedData.push(tempItem);
-      }
-    });
-  });
-  filterData(state.Saresults.comparedData);
-  writeResults(state.Saresults.comparedData);
-}
-
-// // ** FILTER according to drop-down choice
-// // ***************************************
-function filterData(serviceAnimal) {
-  let filteredData = [];
-  let mentalIllnessFromDropDown = document.querySelector("#mental_illness")
-    .value;
-
-  state.Saresults.mental_illness.forEach((element) => {
-    if (element.mental_illness === mentalIllnessFromDropDown) {
-      state.Saresults.filteredData.push(element);
+    .then(() => suicideQuerySelectors(state))
+    .then(() => document
+        .querySelector("#mental_illness")
+        .addEventListener("change", (event) => {
+          suicideQuerySelectors(state, event.target.value)
+        })
+    );
     }
-  });
-
-  state.Saresults.filteredData = filteredData;
-  writeresults(state.Saresults.filteredData);
-}
-
-console.log(getserviceAnimalFromDB("serviceAnimals"));
-// // ** Listen for click
-// // ***************************************
-function addSAListener(st) {
-  if (st.page === "Saresults") {
-    document
-      .querySelector("#mental_illness")
-      .addEventListener("submit", (event) => {
-        event.preventDefault();
-        searchBarSearch();
-      });
-  }
-}
