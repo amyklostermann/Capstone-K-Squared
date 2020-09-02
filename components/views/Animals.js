@@ -1,4 +1,4 @@
 export default () => `
 <section id="animals">
-<h1>Animal Rescue</h1>
+<h2>Animal Rescue</h2>
 </section>`
